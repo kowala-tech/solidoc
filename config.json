@@ -1,0 +1,4 @@
+﻿{
+  "Language": "en",
+  "I18NTemplate": "using System.Collections.Generic;\r\nusing YamlDotNet.Serialization;\r\n\r\nnamespace Solidoc\r\n{\r\n    public static class I18N\r\n    {\r\n        static I18N()\r\n        {\r\n            string contents = ResourceWriter.GetContents();\r\n            var action = new DeserializerBuilder().Build();\r\n            Resource = action.Deserialize<IDictionary<string, string>>(contents);\r\n        }\r\n\r\n        public static IDictionary<string, string> Resource { get; }\r\n\r\n{{Resources}}\r\n    }\r\n}"
+}
