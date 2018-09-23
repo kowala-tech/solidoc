@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using Solidoc.Models;
 using Solidoc.Utility;
@@ -30,6 +31,7 @@ namespace Solidoc.Builders
                 string doc = DocumentationHelper.Get(this.Documentation, "param " + parameter.Name);
                 builder.Append(doc);
                 builder.Append(" | ");
+                builder.Append(Environment.NewLine);
             }
 
             return builder.ToString();

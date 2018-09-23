@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "solidity-docgen": {
+    "solidoc": {
       "commandName": "Project",
       "commandLineArgs": "\"C:\\Users\\nirvan\\Desktop\\mixerp\\solidity\\VirtualRehabToken\\build\\contracts\" \"C:\\Users\\nirvan\\Documents\\design\\docs\""
     }

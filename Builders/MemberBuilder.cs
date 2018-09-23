@@ -54,12 +54,9 @@ namespace Solidoc.Builders
 
                     builder.Append(Environment.NewLine);
                 }
-
-                builder.Append(Environment.NewLine);
             }
 
 
-            builder.Append(Environment.NewLine);
             builder.Append("```");
             builder.Append(Environment.NewLine);
             builder.Append(Environment.NewLine);

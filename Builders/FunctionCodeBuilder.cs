@@ -59,9 +59,14 @@ namespace Solidoc.Builders
                 builder.Append($" {string.Join(" ", modifierList)}");
             }
 
+            string returnParameters = this.GetReturnParameters();
+            
+            if(!string.IsNullOrWhiteSpace(returnParameters))
+            {
+                builder.Append(Environment.NewLine);
+                builder.Append(returnParameters);
+            }
 
-            builder.Append(Environment.NewLine);
-            builder.Append(this.GetReturnParameters());
             builder.Append(Environment.NewLine);
             builder.Append("```");
 

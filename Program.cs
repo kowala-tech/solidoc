@@ -17,7 +17,16 @@ namespace Solidoc
                 return;
             }
 
-            string pathToBuildDirectory = args[0];
+            string pathToRoot = args[0];
+
+            if(Directory.Exists(Path.Combine(pathToRoot, "build")))
+            {
+                Directory.Delete(Path.Combine(pathToRoot, "build"), true);
+            }
+
+            TruffleCompiler.Compile(pathToRoot);
+
+            string pathToBuildDirectory = Path.Combine(pathToRoot, "build", "contracts");
             string outputPath = args[1];
 
             var directory = new DirectoryInfo(outputPath);
