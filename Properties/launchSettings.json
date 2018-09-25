@@ -2,7 +2,7 @@
   "profiles": {
     "solidoc": {
       "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\nirvan\\Desktop\\mixerp\\solidity\\VirtualRehabToken\\build\\contracts\" \"C:\\Users\\nirvan\\Documents\\design\\docs\""
+      "commandLineArgs": "\"C:\\Users\\nirvan\\Desktop\\mixerp\\solidity\\vesting-schedule\" \"C:\\Users\\nirvan\\Documents\\design\\docs\""
     }
   }
 }

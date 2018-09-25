@@ -19,7 +19,7 @@ namespace Solidoc
 
             string pathToRoot = args[0];
 
-            if(Directory.Exists(Path.Combine(pathToRoot, "build")))
+            if (Directory.Exists(Path.Combine(pathToRoot, "build")))
             {
                 Directory.Delete(Path.Combine(pathToRoot, "build"), true);
             }

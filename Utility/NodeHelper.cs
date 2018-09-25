@@ -43,11 +43,9 @@ namespace Solidoc.Utility
                     return node;
                 }
 
-                var found = node.FindNodeById(id);
-
-                if (found.Id.HasValue && found.Id.Value == id)
+                if (node.Nodes != null && node.Nodes.Any())
                 {
-                    return found;
+                    return node.Nodes.FindNodeById(id);
                 }
             }
 

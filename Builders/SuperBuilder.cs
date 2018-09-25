@@ -18,7 +18,6 @@ namespace Solidoc.Builders
         public string Build()
         {
             int super = this.Node.SuperFunction ?? 0;
-            var result = new Node();
             var baseContract = new Contract();
 
             if (super == 0)
@@ -28,9 +27,9 @@ namespace Solidoc.Builders
 
             foreach (var contract in this.Contracts)
             {
-                result = contract.Ast.Nodes.FindNodeById(super);
+                var result = contract.Ast.Nodes.FindNodeById(super);
 
-                if (result == null)
+                if (result.Id != super)
                 {
                     continue;
                 }
@@ -39,9 +38,7 @@ namespace Solidoc.Builders
                 break;
             }
 
-            return result == null
-                ? string.Empty
-                : ":small_red_triangle: " + string.Format(I18N.OverridesSuperFunction, $"[{baseContract.ContractName}.{this.Node.Name}](#{baseContract.ContractName}#{this.Node.Name.ToLower()})");
+            return ":small_red_triangle: " + string.Format(I18N.OverridesSuperFunction, $"[{baseContract.ContractName}.{this.Node.Name}]({baseContract.ContractName}.md#{this.Node.Name.ToLower()})");
         }
     }
 }
