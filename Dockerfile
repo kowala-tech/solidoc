@@ -7,4 +7,4 @@ RUN dotnet publish -c Release
 
 RUN npm install -g truffle@4.1.x
 
-ENTRYPOINT ["dotnet", "/app/bin/Release/netcoreapp2.1/publish/Solidoc.dll", "/src", "/out"] 
+ENTRYPOINT ["dotnet", "/app/bin/Release/netcoreapp2.1/publish/Solidoc.dll"] 
