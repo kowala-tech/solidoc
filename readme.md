@@ -1,6 +1,6 @@
 # Solidoc--Documentation Generator for Solidity
 
-This command-line utility creates mardown-based documentation for your Solidity projects.
+This command-line utility creates markdown-based documentation for your Solidity projects.
 
 ## Getting Started
 
