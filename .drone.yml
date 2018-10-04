@@ -8,6 +8,7 @@ clone:
     pull: true
     tags: true
 
+pipeline:
   publish:
     image: kowalatech/drone-docker
     repo: kowalatech/solidoc
