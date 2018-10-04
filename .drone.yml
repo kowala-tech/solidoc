@@ -13,7 +13,7 @@ clone:
     repo: kowalatech/solidoc
     secrets: [ docker_username, docker_password ]
     privileged: true 
-     auto_tag: true
+    auto_tag: true
     when:
-      branch: master
-      event: [push, tag] 
+        branch: master
+        event: [push, tag] 
