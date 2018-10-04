@@ -1,0 +1,19 @@
+workspace:
+  base: /go
+  path: src/github.com/kowala-tech/solidoc
+
+clone:
+  git:
+    image: plugins/git:next
+    pull: true
+    tags: true
+
+  publish:
+    image: kowalatech/drone-docker
+    repo: kowalatech/solidoc
+    secrets: [ docker_username, docker_password ]
+    privileged: true 
+     auto_tag: true
+    when:
+      branch: master
+      event: [push, tag] 
