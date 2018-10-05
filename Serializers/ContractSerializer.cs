@@ -20,7 +20,7 @@ namespace Solidoc.Serializers
             string documentation = contractNode.Documentation;
             string contractTitle = DocumentationHelper.Get(documentation, "title");
             string notice = DocumentationHelper.GetNotice(documentation);
-            var anchors = contracts.Select(item => $"- [{item.ContractName}]({item.ContractName}.md)").ToList();
+            var anchors = contracts.OrderBy(item => item.ContractName).Select(item => $"- [{item.ContractName}]({item.ContractName}.md)").ToList();
 
 
             var dependencies = NodeHelper.GetBaseContracts(contract) ?? new List<Node>();
